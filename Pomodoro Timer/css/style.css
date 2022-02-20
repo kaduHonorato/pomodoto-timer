@@ -1,0 +1,443 @@
+body
+{
+background-image: url("../images/tomato.png");
+background-color:#FDFFBE; 
+background-size: 80px;
+background-position: center; 
+justify-content:center;
+align-items:center;
+position: relative;
+}
+
+#container 
+{
+width:600px;
+box-shadow: 0 0 2px rgba(0,0,0,.7);
+background-color:#000;
+}
+
+.main_title
+{
+background-color:rgba(244,100,100,.8);
+color:#fff;
+text-align:center;
+}
+
+#container ul
+{
+display:block;
+background-color:rgba(244,100,100,.6);
+}
+
+#container ul li
+{
+color:#fff;    
+display:inline-block;
+padding:5px;
+}
+
+
+#container ul li:not(.opacity_thirty_percent):hover
+{
+cursor:pointer;
+color:rgb(244,100,100);
+}
+
+#container_body
+{
+padding:30px;
+background-color:#FDFFBE;
+color:rgb(244,100,100);
+}
+
+#box_pomodoro_basic_info
+{
+text-align:center;
+font-family:"DejaVu Sans","Arial";
+}
+
+#txt_pomodoro_time_infos
+{
+display:block;
+}
+
+#box_countdown_bars
+{
+margin:20px 0;   
+border:1px solid #fff;
+display: block;
+background-color:#fff;
+box-shadow: 0 0 2px #000;
+}
+
+#box_countdown_bars progress
+{
+border:1px solid #fff;
+box-sizing:border-box;
+float:left;
+}
+
+.pomodoro_bar,
+.pomodoro_bar::-webkit-progress-bar
+{
+    background-color:rgb(244,100,100);
+}
+
+.short_break_bar,
+.short_break_bar::-webkit-progress-bar,
+.long_break_bar,
+.long_break_bar::-webkit-progress-bar
+{
+background-color:#B9B9B9;
+}
+
+
+.pomodoro_bar,
+.short_break_bar,
+.long_break_bar
+{
+color:#6acf89; 
+}
+
+.pomodoro_bar::-webkit-progress-value
+{
+background-color: #6acf89 !important; 
+}
+
+.short_break_bar::-webkit-progress-value
+{
+ background-color: #6acf89 !important;
+}
+
+.long_break_bar::-webkit-progress-value
+{
+    background-color: #6acf89 !important;
+}
+
+.pomodoro_bar::-moz-progress-bar
+{
+    background-color: #6acf89 !important;
+}
+
+
+.short_break_bar::-moz-progress-bar
+{
+    background-color: #6acf89 !important;
+}
+
+.long_break_bar::-moz-progress-bar
+{
+    background-color: #6acf89 !important;
+}
+
+#box_pomodoro_controls
+{
+grid-template-columns:10% 20% 20% 10%;
+gap:10px;
+justify-content:center;
+}
+
+#box_pomodoro_controls button
+{
+border:none;
+border-radius:none;
+padding:5px;
+font-size:20px;
+background-color:rgb(244,100,100);
+color:#FDFFBE;
+}
+
+#box_pomodoro_controls button:not(:disabled)
+{
+opacity:.9;
+}
+
+#box_pomodoro_controls button:disabled
+{
+opacity:.3;
+}
+
+#box_pomodoro_controls button:hover:not(:disabled)
+{
+opacity:1;
+}
+
+
+
+#configurations_menu,
+#box_credits
+{
+background:rgba(244,100,100,.7);
+justify-content:center;
+align-items:center;
+gap:10px;
+position:relative;
+width:600px;
+height:100vh;
+overflow-y:scroll;
+overflow-x:hidden;
+}
+
+#title_configurations_menu,
+#title_box_credits
+{
+color:#fff;
+text-align:center;
+}
+
+#configurations_menu fieldset legend
+{
+    color:#fff;
+}
+
+#configurations_menu fieldset label
+{
+margin:10px;
+padding:10px;
+text-align:center;
+}
+
+#configurations_menu fieldset label:not(.selected_label)
+{
+background-color:#FDFFBE;
+color:rgb(244,100,100);
+cursor:pointer;
+}
+
+#configurations_menu fieldset label.selected_label
+{
+background-color:rgb(244,100,100); 
+color:#FDFFBE;
+}
+
+
+#configurations_menu fieldset label input[type = "radio"]
+{
+    display:none;
+}
+
+
+#tic_tac_sound
+{
+    margin: 0 auto;
+    width:18px;
+    height:18px; 
+}
+
+#audio_tic_tac_sound
+{
+    width:100%;
+    color:#FDFFBE;
+}
+
+
+#bt_close_configurations_menu,
+#bt_close_box_credits
+{
+position:absolute;
+top:0;
+left:0;
+color:#fff;
+padding:20px;
+font-size:20px;
+background:rgba(244,100,100,.7);
+z-index:100;
+}
+
+#bt_close_configurations_menu:hover,
+#bt_close_box_credits:hover
+{
+cursor:pointer;
+background:rgba(244,100,100,.9);
+}
+
+#box_bt_save_data
+{
+height:50px;
+padding-bottom:10px;
+}
+
+#box_credits ul,
+#box_credits ul li
+{
+display:block;
+}
+
+#box_credits ul li
+{
+margin:10px 0;
+padding:10px;
+background-color:#FDFFBE;
+}
+
+#box_credits ul li a
+{
+color:rgba(244,100,100,.8);
+}
+
+#box_credits ul li a:hover
+{
+color:rgb(244,100,100);  
+}
+
+
+.opacity_animation
+{
+    animation:opacity_animation 2s;
+    animation-iteration-count:infinite;
+}
+
+.blink_animation
+{
+    animation:blink_animation .5s;
+    animation-iteration-count:infinite;
+}
+
+.box_shadow_animation
+{
+    animation:box_shadow_animation .5s;
+    animation-iteration-count:infinite;
+}
+
+
+@keyframes opacity_animation
+{
+
+    0%
+    {
+        opacity:50%; 
+    }
+
+    20%
+    {
+        opacity:60%;
+     
+    }
+
+    40%
+    {
+        opacity:70%; 
+    }    
+
+    60%
+    {
+        opacity:80%; 
+       
+    }
+
+    80%
+    {
+        opacity:90%; 
+        
+    }
+
+    100%
+    {
+        opacity:100%; 
+        
+    }
+
+}
+
+@keyframes blink_animation
+{
+
+    0%
+    {
+        opacity:0;
+    }
+
+    100%
+    {
+        opacity:100;
+    }
+
+}
+
+@keyframes box_shadow_animation
+{
+    0%
+    {
+        box-shadow:none; 
+    }
+
+    20%
+    {
+        box-shadow:0 0 2px #FDFFBE inset;
+        
+    }
+
+    40%
+    {
+        box-shadow:0 0 4px #FDFFBE inset;
+    }
+
+    60%
+    {
+        box-shadow:0 0 6px #FDFFBE inset;
+    }
+
+    80%
+    {
+        box-shadow:0 0 8px #FDFFBE inset;
+    }
+
+    100%
+    {
+        box-shadow:0 0 10px #FDFFBE inset;
+    }
+    
+}
+
+
+/* ============================================================================ */
+
+@media (max-width:720px)
+{       
+    body
+    {
+        background-size: 70px;
+    }    
+    
+    #container,
+    #configurations_menu,
+    #box_credits 
+    {
+        width:500px;
+    }
+    
+    #box_pomodoro_basic_info,
+    #box_pomodoro_controls button
+    {
+        font-size:14px;
+    }
+      
+
+}
+
+
+@media (max-width:620px)
+{        
+    body
+    {
+        background-size: 60px;
+    }    
+    
+    #container 
+    {
+        width:400px;
+    }  
+
+    #box_pomodoro_basic_info,
+    #box_pomodoro_controls button
+    {
+        font-size:12px;
+    }
+
+    #configurations_menu,
+    #box_credits
+    {
+        width:100vw;
+    }
+
+}
